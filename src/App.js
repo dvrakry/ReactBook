@@ -1,18 +1,16 @@
-import { Fragment } from 'react';
-import './App.css';
-
+import "./App.css";
 
 function App() {
-  const name = '리액트';
-  return(
-    <Fragment>
-        {name === '리액트' ? (
-          <h1>리액트입니다.!</h1>
-        ) : (
-          <h2>리액트가 아닙니다</h2>
-        )}
-    </Fragment>
-  ); 
+  const name = "리액트";
+  return (
+    <>
+      <div className="react">{name}</div>
+      <input />
+      <h1>들여쓰기 존나</h1>
+      <h2>이상한 코드</h2>
+      <p>입니다.</p>
+    </>
+  );
 }
 
 export default App;

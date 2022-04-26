@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.react {
+    background:aqua;
+    color : black;
+    font-size : 48px;
+    font-weight : bold;
+    padding : 16px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
