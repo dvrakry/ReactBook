@@ -1,16 +1,32 @@
-import "./App.css";
+import { Component } from 'react';
+import ErrorBoudry from './ErrorBoundry';
+import LifeCycleSample from './LifeCyclSample';
 
-function App() {
-  const name = "리액트";
-  return (
-    <>
-      <div className="react">{name}</div>
-      <input />
-      <h1>들여쓰기 존나</h1>
-      <h2>이상한 코드</h2>
-      <p>입니다.</p>
-    </>
-  );
+function getRandomColor() {
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
+}
+
+class App extends Component {
+  state = {
+    color: '#000000',
+  };
+
+  handleClick = () => {
+    this.setState({
+      color: getRandomColor(),
+    });
+  };
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.handleClick}>랜덤색상</button>
+        <ErrorBoudry>
+          <LifeCycleSample color={this.state.color} />
+        </ErrorBoudry>
+      </div>
+    );
+  }
 }
 
 export default App;
