@@ -20,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.handleClick}>랜덤색상</button>
+        <button onClick={this.handleClick}>랜덤색상!</button>
         <ErrorBoudry>
           <LifeCycleSample color={this.state.color} />
         </ErrorBoudry>
